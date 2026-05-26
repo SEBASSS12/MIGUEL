@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 Gestión Vehículos
+        </div>
+
+        <nav class="menu">
+            <button onclick="window.location.href='panel.html'">
+                Inicio
+            </button>
+
+            <button onclick="window.location.href='registro.html'">
+                Usuarios
+            </button>
+
+            <button onclick="window.location.href='vehiculos.html'">
+                Vehículos
+            </button>
+
+            <button onclick="window.location.href='conductores.html'">
+                Conductores
+            </button>
+
+            <button onclick="window.location.href='mantenimientos.html'">
+                Mantenimientos
+            </button>
+
+            <button class="btn-salir" onclick="cerrarSesion()">
+                Salir
+            </button>
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+        <h1>Registro de Usuarios</h1>
+
+        <input type="hidden" id="id">
+
+        <input type="text" id="nombre" placeholder="Nombre">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="password" id="password" placeholder="Contraseña">
+
+        <select id="rol">
+            <option value="Administrador">Administrador</option>
+            <option value="Jefe de mantenimiento">Jefe de mantenimiento</option>
+            <option value="Conductor">Conductor</option>
+            <option value="Consulta">Consulta</option>
+        </select>
+
+        <input type="file" id="foto" accept="image/*">
+
+        <button onclick="guardarUsuario()">
+            Guardar
+        </button>
+
+        <h2>Usuarios registrados</h2>
+
+        <div id="listaUsuarios"></div>
+
+    </div>
+
+    <script src="global.js"></script>
+    <script src="usuarios.js"></script>
+
+</body>
+
+</html>

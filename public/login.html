@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Iniciar Sesión</h1>
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="password" id="password" placeholder="Contraseña">
+
+        <button onclick="login()">
+            Ingresar
+        </button>
+
+        <button class="btn-secundario" onclick="window.location.href='registro.html'">
+            Crear cuenta
+        </button>
+
+        <p id="mensaje"></p>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Conductores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 Gestión Vehículos
+        </div>
+
+        <nav class="menu">
+            <button onclick="window.location.href='panel.html'">
+                Inicio
+            </button>
+
+            <button onclick="window.location.href='registro.html'">
+                Usuarios
+            </button>
+
+            <button onclick="window.location.href='vehiculos.html'">
+                Vehículos
+            </button>
+
+            <button onclick="window.location.href='conductores.html'">
+                Conductores
+            </button>
+
+            <button onclick="window.location.href='mantenimientos.html'">
+                Mantenimientos
+            </button>
+
+            <button class="btn-salir" onclick="cerrarSesion()">
+                Salir
+            </button>
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+        <h1>Gestión de Conductores</h1>
+
+        <input type="hidden" id="id">
+
+        <input type="text" id="nombre" placeholder="Nombre del conductor">
+
+        <input type="text" id="documento" placeholder="Documento">
+
+        <input type="text" id="telefono" placeholder="Teléfono">
+
+        <input type="text" id="licencia" placeholder="Licencia">
+
+        <select id="vehiculo_id">
+            <option value="">Seleccione un vehículo</option>
+        </select>
+
+        <button onclick="guardarConductor()">
+            Guardar conductor
+        </button>
+
+        <button class="btn-secundario" onclick="limpiarFormulario()">
+            Limpiar formulario
+        </button>
+
+        <p id="mensaje"></p>
+
+        <h2>Conductores registrados</h2>
+
+        <div id="listaConductores"></div>
+
+    </div>
+
+    <script src="global.js"></script>
+    <script src="conductores.js"></script>
+
+</body>
+
+</html>
